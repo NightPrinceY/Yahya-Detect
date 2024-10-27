@@ -4,7 +4,7 @@ from ultralytics import YOLO
 from PIL import Image
 
 # Load the trained YOLOv8 model
-model = YOLO("/content/runs/detect/train4/weights/best.pt")
+model = YOLO("yahya-detection.pt")
 
 # Define the prediction function
 def predict(image):
@@ -17,7 +17,7 @@ interface = gr.Interface(
     fn=predict, 
     inputs=gr.Image(type="pil"), 
     outputs=gr.Image(type="pil"),
-    title="Yhaya Detect",
+    title="Yahya Detect",
     description="Detect Yahya now!"
 )
 
